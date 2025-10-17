@@ -1,5 +1,5 @@
 function Mensagem() {
-  return <h1>Para o meu eu do futuro eu consegui</h1>;
+  return <h1>Hello Word S2</h1>;
 }
 
 export default Mensagem;
