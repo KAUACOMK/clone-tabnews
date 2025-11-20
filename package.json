@@ -2,7 +2,7 @@
   "name": "package.json",
   "version": "1.0.0",
   "description": "Projeto para estudo de 1 a 100",
-  "main": "index.js",
+  "main": "layouts.js",
   "scripts": {
     "dev": "next dev",
     "lint:check": "prettier --check .",

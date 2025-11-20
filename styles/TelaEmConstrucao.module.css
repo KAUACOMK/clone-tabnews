@@ -1,0 +1,77 @@
+@import url(Variaveis.css);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(
+    --fonte-principal
+  ); /*Defini a font no body pois tem apenas 1 texto*/
+}
+
+.backgroundblueParent {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--cor-background);
+}
+
+/* TODAS AS CAMADAS SOBREPOSTAS AO CENTRO */
+.layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* ⬅ CENTRALIZAÇÃO PERFEITA */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 80%; /* responsivo */
+  max-width: 900px; /* tamanho máximo */
+  border-radius: 20px;
+}
+/* CAMADA 1 — GRADIENTE */
+.gradient {
+  background: radial-gradient(
+    40% 60% at 50% 130%,
+    var(--color5) 50%,
+    rgba(70, 144, 212, 0)
+  );
+  height: 70%;
+  max-height: 900px;
+  z-index: 1;
+}
+
+/* CONTEÚDO NA CAMADA SUPERIOR */
+.construcao {
+  margin: 0;
+  color: var(--cor-texto);
+  font-size: 64px;
+  text-align: center;
+}
+/* RESPONSIVIDADE PARA CELULAR */
+@media (max-width: 600px) {
+  .layer {
+    width: 80%;
+    max-width: 80%;
+    transform: translate(-50%, -45%); /* evita deslocar demais */
+    border-radius: 12px;
+  }
+
+  .gradient {
+    width: 350px;
+    height: 350px;
+    min-height: 200px;
+  }
+  .construcao {
+    font-size: 1.4rem;
+  }
+
+  .backgroundblueParent {
+    min-height: 100vh; /* ESSENCIAL: deixa a altura crescer para mobile */
+  }
+}
