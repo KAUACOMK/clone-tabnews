@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 .next
+package.json
+.idea
 =======
 >>>>>>> refs/remotes/origin/main
 node_modules
